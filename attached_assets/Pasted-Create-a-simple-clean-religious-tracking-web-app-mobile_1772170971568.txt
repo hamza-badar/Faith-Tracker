@@ -1,0 +1,145 @@
+Create a simple, clean religious tracking web app (mobile-first) using HTML, CSS, and vanilla JavaScript.
+
+Purpose:
+This app helps me track my Islamic religious activities with intention, reasons, and accountability — not just numbers.
+
+Use localStorage for all persistence. No backend required.
+
+--------------------------------------------------
+1. Dashboard Layout
+--------------------------------------------------
+- Card-based layout for each section
+- Clean, minimal, distraction-free UI
+- Mobile-first and touch friendly
+- Each section should be collapsible/expandable
+
+--------------------------------------------------
+2. Nafl Tracker (With Reason)
+--------------------------------------------------
+Label: "Nafl"
+
+Functionality:
+- "+" button adds a new Nafl entry
+- Instead of just increasing a number, open a small modal or inline form with:
+  - Date (default = today, editable)
+  - Reason / Intention (text input, required)
+    Examples:
+    - Tahajjud
+    - Gratitude
+    - Repentance
+    - Dua for something
+- On save, store the entry in a list
+
+Display:
+- Show total Nafl count at top
+- Below it, show a scrollable list of Nafl entries:
+  - Date
+  - Reason
+- Each entry should have:
+  - Delete button
+- Minimum count = 0
+
+--------------------------------------------------
+3. Quran Progress Tracker (Juz + Fractions)
+--------------------------------------------------
+Label: "Quran"
+
+Rules:
+- Quran has 30 Juz
+- Each Juz has 4 parts:
+  - Quarter
+  - Half
+  - Three-Quarter
+  - Full
+
+Buttons:
+- "+" increases by one quarter
+- "-" decreases by one quarter
+
+Carry Logic:
+- Quarter → Half → Three-Quarter → Full
+- After Full, increment Juz by 1 and reset fraction
+- Max limit = 30 Juz
+- Cannot exceed 30 Juz
+
+Display Rules:
+- Do NOT show decimals (no 6.25, 6.5 etc)
+- Display text like:
+  - "6 Juz + Quarter"
+  - "6 Juz + Half"
+  - "6 Juz + Three-Quarter"
+  - "7 Juz"
+
+Persist progress in localStorage.
+
+--------------------------------------------------
+4. Sajda Counter
+--------------------------------------------------
+Label: "Sajda"
+
+- Simple + and - buttons
+- Minimum = 0
+- Persist value
+
+--------------------------------------------------
+5. Qaza Prayer Tracker (With Date & Reason)
+--------------------------------------------------
+Section Title: "Qaza Prayers"
+
+For each prayer:
+- Fajr
+- Zuhr
+- Asr
+- Maghrib
+- Isha
+
+Functionality:
+- "+" button opens a form/modal with:
+  - Date when prayer went Qaza (required)
+  - Reason (text input, required)
+    Examples:
+    - Overslept
+    - Travel
+    - Work
+    - Health
+    - Negligence
+- On save:
+  - Increment Qaza count for that prayer
+  - Store entry in prayer-specific list
+
+Display:
+- Show total Qaza count per prayer
+- Below each prayer, show list of entries:
+  - Date
+  - Reason
+- Each entry should have:
+  - Delete option (which reduces count)
+
+Minimum count = 0
+
+--------------------------------------------------
+6. Charity / To Give Tracker
+--------------------------------------------------
+Label: "To Give"
+
+- Numeric input field
+- Accept positive numbers only
+- Currency-agnostic
+- Persist value in localStorage
+
+--------------------------------------------------
+7. General Requirements
+--------------------------------------------------
+- Mobile responsive
+- Minimal neutral color palette
+- Touch-friendly buttons
+- No login/authentication
+- Data persists on refresh
+- Clear typography
+
+--------------------------------------------------
+Bonus (If Possible):
+--------------------------------------------------
+- Dark mode toggle
+- Reset button per section
+- Export data as JSON
