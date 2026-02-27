@@ -23,7 +23,7 @@ export function CharityTracker() {
 
   const handleBlur = () => {
     const num = parseInt(localAmount, 10);
-    const validNum = isNaN(num) || num < 0 ? 0 : num;
+    const validNum = isNaN(num) ? 0 : num;
     
     if (validNum !== progress?.charityAmount) {
       updateProgress.mutate({ charityAmount: validNum });
@@ -45,7 +45,6 @@ export function CharityTracker() {
             </span>
             <Input
               type="number"
-              min="0"
               value={localAmount}
               onChange={(e) => setLocalAmount(e.target.value)}
               onBlur={handleBlur}
