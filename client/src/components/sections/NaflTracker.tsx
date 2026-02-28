@@ -52,7 +52,7 @@ export function NaflTracker() {
             <h3 className="text-3xl font-display font-semibold text-foreground">
               {count}
             </h3>
-            <p className="text-sm text-muted-foreground font-medium">Total Fasts</p>
+            <p className="text-sm text-muted-foreground font-medium">Total Entries</p>
           </div>
         </div>
 
@@ -60,12 +60,12 @@ export function NaflTracker() {
           <DialogTrigger asChild>
             <Button className="rounded-2xl shadow-sm bg-primary hover:bg-primary/90 text-primary-foreground">
               <Plus className="w-4 h-4 mr-2" />
-              Add Fast
+              Add Entry
             </Button>
           </DialogTrigger>
           <DialogContent className="sm:max-w-[425px] rounded-[2rem] p-6 border-border/50">
             <DialogHeader className="mb-4">
-              <DialogTitle className="font-display text-2xl">Record Fast</DialogTitle>
+              <DialogTitle className="font-display text-2xl">Record Nafl</DialogTitle>
             </DialogHeader>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
@@ -85,7 +85,7 @@ export function NaflTracker() {
                 <Label htmlFor="reason" className="text-muted-foreground">Intention / Notes</Label>
                 <Input
                   id="reason"
-                  placeholder="e.g. Shawwal, Monday fast..."
+                  placeholder="e.g. Tahajjud, Gratitude, Repentance..."
                   value={reason}
                   onChange={(e) => setReason(e.target.value)}
                   className="h-14 rounded-2xl bg-secondary/30 border-border/50 px-4 font-medium"
@@ -133,7 +133,7 @@ export function NaflTracker() {
         </div>
       ) : (
         <div className="py-8 text-center px-4">
-          <p className="text-muted-foreground text-sm font-medium">No fasts recorded yet.</p>
+          <p className="text-muted-foreground text-sm font-medium">No entries recorded yet.</p>
         </div>
       )}
     </div>
