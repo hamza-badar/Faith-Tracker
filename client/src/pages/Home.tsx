@@ -18,8 +18,8 @@ export default function Home() {
       {/* Premium Header */}
       <header className="sticky top-0 z-50 w-full glass-panel border-x-0 border-t-0 rounded-none px-4 sm:px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-primary text-primary-foreground rounded-2xl flex items-center justify-center shadow-lg shadow-primary/20">
-            <span className="font-display font-bold text-xl leading-none tracking-tighter">Deen</span>
+          <div className="px-3 py-1.5 bg-primary text-primary-foreground rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
+            <span className="font-display font-bold text-lg leading-none tracking-tight">Deen</span>
           </div>
           <h1 className="font-display text-xl font-semibold tracking-tight text-foreground">
             Tracker
